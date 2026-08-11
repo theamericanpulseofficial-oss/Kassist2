@@ -18,14 +18,14 @@ jobs:
         run: |
           echo "Repository files:"
           ls -lah
-          test -f FF-Assistant-VOICE-FIXED-KEY-READY.zip
+          test -f FF-Assistant-GEMINI-API-FIXED-READY.zip
 
       - name: Extract Android project
         run: |
           rm -rf extracted
           mkdir extracted
 
-          unzip -q FF-Assistant-VOICE-FIXED-KEY-READY.zip -d extracted
+          unzip -q FF-Assistant-GEMINI-API-FIXED-READY.zip -d extracted
 
           echo "Searching for Gradle project..."
 
@@ -73,7 +73,6 @@ jobs:
         run: |
           echo "Project root:"
           pwd
-          echo "Files:"
           ls -lah
 
       - name: Build Debug APK
